@@ -1,0 +1,71 @@
+\documentclass[twoside,floatfix,a4wide]{revtex4}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+%\usepackage{asymptote}
+%\usepackage{amsmath}
+\usepackage{color}
+\definecolor{mydarkred}{rgb}{0.7,0,0}
+\newcommand{\checkme}[1] {\textcolor{mydarkred}{{\bf CHECK ME:}  \{#1\}}}
+\newcommand{\comment}[1] {\textcolor{mydarkred}{\em  \{#1\}}}
+
+%\numberwithin{equation}{section} % Eguation numbering with section id. Reguires amsmath -package.
+\pagestyle{fancy}
+\fancyhead{} % clear all fields
+
+\fancyhead[L]{\bf {\today}} % Left Odd, Right Even
+
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\newcommand{\urltilde}[1]{\texttt{#1}} % solves the tilde problem
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdftitle={My title},    % title
+    pdfauthor={Author},     % author
+    pdfsubject={Subject},   % subject of the document
+    pdfnewwindow=true,      % links in new window
+    pdfkeywords={keywords}, % list of keywords
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=blue,         % color of file links
+    urlcolor=red            % color of external links
+}
+
+\begin{document}
+\title{Testing PROOF Analysis with Pythia8 Generator Level Data}
+\author{\underline{M.~J.~Kortelainen}, A.~Heikkinen, P.~Kaitaniemi, S.~Lehti,
+  T.~Lind\'{e}n and L.~Wendland}
+\affiliation{Helsinki Institute of Physics, P.O. Box 64, FIN-00014 University of Helsinki, Finland.
+  E-mail: matti.kortelainen@cern.ch}
+
+\begin{abstract}
+  We study the performance of different ways of running a physics
+  analysis in preparation for the analysis of petabytes of data in the
+  LHC era. Our test cases include running the analysis code in a Linux
+  cluster with a single thread in ROOT, with the Parallel ROOT
+  Facility (PROOF), and in parallel via the Grid interface with the
+  ARC middleware. We use of the order of millions of Pythia8 generator
+  level QCD multi-jet events to stress the analysis system. The
+  performances of the test cases are reported.
+\end{abstract}
+
+\maketitle
+\thispagestyle{fancy}
+
+
+\input{notes}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
