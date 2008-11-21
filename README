@@ -1,2 +1,16 @@
 Our experiences with HipProofAnalysis and PROOF for CHEP'09 proceedings.
 
+Figures:
+
+- Place figures under fig/ subdirectory (doesn't exist yet)
+- Currently using latex -> dvips -> ps2pdf chain (this may change to
+  pdflatex in the future)
+- Figures should be stored in EPS format
+- If the figure is generated from some other format (which is easier
+  to edit), the original figure should be stored too
+  * If some modifications are needed, it's easier to do them in the
+    original
+- Examples:
+  * For ROOT, store figure.C and figure.eps
+  * for Inkscape, store figure.svg and figure.eps
+
