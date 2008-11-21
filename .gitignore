@@ -2,4 +2,6 @@
 *.aux
 *.log
 *.out
+*.ps
+*.dvi
 chep09proof.pdf
